@@ -108,7 +108,7 @@ fn match_orientation(
             .map(|p| transform(p, orientation, &translation))
             .collect();
         if set1.intersection(&transformed_set2).count() >= 12 {
-            return Some((translation.into(), transformed_set2));
+            return Some(((-translation).into(), transformed_set2));
         }
     }
 
